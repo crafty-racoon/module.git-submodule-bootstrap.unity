@@ -1,13 +1,16 @@
 # module.git-submodule-bootstrap.unity
 
-Unity Editor integration that runs `git submodule update --init --recursive`
-once per Editor session. It keeps submodule versions under the adopting
-repository's control: it does not use `--remote`, rewrite `.gitmodules`, or move
-gitlinks.
+Unity Editor integration that checks `git submodule status --recursive` once per
+Editor session and runs `git submodule update --init --recursive` only when a
+submodule is missing or differs from the adopting repository's gitlink. It keeps
+submodule versions under the adopting repository's control: it does not use
+`--remote`, rewrite `.gitmodules`, or move gitlinks.
 
 ## Features
 
 - Non-blocking update after the Editor opens.
+- No update command or progress window when every submodule already matches.
+- Temporary progress window while missing or outdated submodules are processed.
 - One automatic attempt per Editor session, including across domain reloads.
 - Manual update at **Tools > Git Submodules > Update Now**.
 - Per-project, per-user automatic-update toggle at
@@ -25,7 +28,7 @@ package does not depend on the submodule operation that it performs:
 {
   "dependencies": {
     "com.crafty-racoon.git-submodule-bootstrap":
-      "https://github.com/crafty-racoon/module.git-submodule-bootstrap.unity.git#v0.1.0"
+      "https://github.com/crafty-racoon/module.git-submodule-bootstrap.unity.git#v0.2.0"
   }
 }
 ```

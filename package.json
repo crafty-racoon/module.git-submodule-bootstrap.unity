@@ -1,8 +1,8 @@
 {
   "name": "com.crafty-racoon.git-submodule-bootstrap",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "displayName": "Git Submodule Bootstrap",
-  "description": "Initializes a Unity project's Git submodules once per Editor session and exposes manual update controls.",
+  "description": "Detects and initializes a Unity project's missing or outdated Git submodules once per Editor session.",
   "unity": "6000.0",
   "author": {
     "name": "Crafty Racoon",
