@@ -1,0 +1,18 @@
+{
+  "name": "com.crafty-racoon.git-submodule-bootstrap",
+  "version": "0.1.0",
+  "displayName": "Git Submodule Bootstrap",
+  "description": "Initializes a Unity project's Git submodules once per Editor session and exposes manual update controls.",
+  "unity": "6000.0",
+  "author": {
+    "name": "Crafty Racoon",
+    "url": "https://github.com/crafty-racoon"
+  },
+  "keywords": [
+    "git",
+    "submodule",
+    "bootstrap",
+    "editor"
+  ]
+}
+
